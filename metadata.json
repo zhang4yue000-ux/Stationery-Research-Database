@@ -1,0 +1,6 @@
+{
+  "name": "文具品牌研究资料库",
+  "description": "手帐与本册工艺研究平台。包含经典与独立品牌馆、印刷装订工艺库、优质特种材质档案，并集成日常灵感拍照/优秀产品记录模块，支持完全平抹与随手拍记录。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

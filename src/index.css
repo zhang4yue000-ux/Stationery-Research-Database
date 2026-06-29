@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+/* Base Document resets */
+body {
+  background-color: #fafafa !important; /* bg-zinc-50 */
+  color: #18181b !important; /* text-zinc-900 */
+}
+
+/* 
+ * BENTO THEATING ENGINE (AESTHETIC OVERRIDES)
+ * Target the specific legacy hex codes populated in existing views 
+ * and replace them with high-contrast, premium zinc grays and modern rounded card-shapes.
+ */
+
+/* 1. Global Viewports and Workspace Canvasses */
+[class*="bg-[#F5F4EE]"], 
+[class*="bg-stone-100"] {
+  background-color: #fafafa !important; /* True Bento light zinc background */
+}
+
+/* 2. Container Cards and Interactive Lists */
+[class*="bg-white"] {
+  background-color: #ffffff !important;
+}
+[class*="bg-[#FAF9F5]"] {
+  background-color: #f4f4f5 !important; /* Smooth soft gray input fields */
+}
+
+/* 3. Deep Accent Cards and Buttons */
+[class*="bg-[#1F2937]"] {
+  background-color: #18181b !important; /* Sophisticated deep charcoal/zinc-900 */
+}
+[class*="hover:bg-neutral-800"]:hover, 
+[class*="hover:bg-[#374151]"]:hover {
+  background-color: #27272a !important; /* zinc-800 */
+}
+
+/* 4. Fine Lines and Borders */
+[class*="border-[#EBE9E0]"], 
+[class*="border-[#E3DFD5]"],
+[class*="border-stone-200"],
+[class*="border-neutral-200"] {
+  border-color: #e4e4e7 !important; /* Clean modern zinc-200 lines */
+}
+
+/* 5. Modern Bento Roundness Definitions */
+[class*="rounded-md"], 
+[class*="rounded-lg"] {
+  border-radius: 0.75rem !important; /* rounded-xl for crisp, softened corners */
+}
+[class*="rounded-full"][class*="w-9"] {
+  border-radius: 9999px !important; /* Keep avatar tags circular */
+}
+
+/* 6. Typography Accent Pairings */
+[class*="text-[#1F2937]"] {
+  color: #18181b !important; /* High contrast text-zinc-900 */
+}
+[class*="text-[#5C5A52]"] {
+  color: #52525b !important; /* Subtitle text-zinc-600 */
+}
+[class*="text-[#8C8A82]"], 
+[class*="text-neutral-500"], 
+[class*="text-stone-500"] {
+  color: #71717a !important; /* Muted label text-zinc-500 */
+}
+
+/* 7. Highlight Indicators & Borders */
+[class*="border-[#1F2937]"] {
+  border-color: #18181b !important;
+}
+[class*="ring-[#1F2937]"] {
+  --tw-ring-color: #18181b !important;
+}
+[class*="border-zinc-150"] {
+  border-color: #ffffff !important;
+}
+
+/* 8. Extra Premium Highlights */
+.bento-card {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.bento-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+}
+
+.vintage-serif {
+  font-family: var(--font-serif);
+}
